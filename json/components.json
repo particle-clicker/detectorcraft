@@ -1,0 +1,17 @@
+[
+    {
+        "id": "tracker",
+        "thickness": 100,
+        "material": "",
+        "measurements":
+        {
+            "Electron":
+            {
+                "Tracking": 0.9,
+                "ECal": 0
+            }
+        },
+        "stops": [],
+        "cost": 1000
+    }
+]
