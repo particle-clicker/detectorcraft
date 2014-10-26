@@ -23,22 +23,22 @@ var Craft = (function() {
 
   Detector.prototype.measureParticle = function(particleId) {
     var performance = {};
-    for (var m in measurements) {
+    measurements.forEach(function(m) {
       performance[m] = 1.0;
-    }
+    });
     for (var i=0; i < this.components.length; i++) {
       var comp = this.components[i];
       var meas = comp.measurements[particleId];
-      for (var m in measurements) {
+      measurements.forEach(function(m) {
         performance[m] *= 1.0 - meas[m];
-      }
-      if (comp.stops.contains(particleId)) {
+      });
+      if (comp.stops.indexOf(particleId) > -1) {
         break;
       };
     }
-    for (var m in measurements) {
+    measurements.forEach(function(m) {
       performance[m] = 1.0 - performance[m];
-    }
+    });
     return performance;
   };
 
