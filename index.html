@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <script src='main.js'></script>
+  </head>
+
+  <body>
+    <div id="columns">
+      <div class="column" draggable="true"><header>Tracker</header></div>
+      <div class="column" draggable="true"><header>E-Cal</header></div>
+      <div class="column" draggable="true"><header>H-Cal</header></div>
+
+      <div class='detector'></div>
+    </div>
+
+    <script>
+      var cols, dragSrcEl, detector;
+
+      cols = document.querySelectorAll('#columns .column');
+      [].forEach.call(cols, function(col) {
+        col.addEventListener('dragstart', handleDragStart, false);
+        col.addEventListener('dragenter', handleDragEnter, false)
+        col.addEventListener('dragover', handleDragOver, false);
+        col.addEventListener('dragleave', handleDragLeave, false);
+        col.addEventListener('drop', handleDrop, false);
+        col.addEventListener('dragend', handleDragEnd, false);
+      });
+
+      detector = document.querySelectorAll('.detector');
+      [].forEach.call(detector, function(det) {
+        //det.addEventListener('dragstart', handleDragStart, false);
+        det.addEventListener('dragenter', handleDragEnter, false)
+        det.addEventListener('dragover', handleDragOver, false);
+        det.addEventListener('dragleave', handleDragLeave, false);
+        det.addEventListener('drop', dropInDetector, false);
+        det.addEventListener('dragend', handleDragEnd, false);
+      });
+
+      dragSrcEl = null;
+
+    </script>
+  </body>
+
+</html>
