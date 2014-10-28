@@ -1,5 +1,6 @@
-[
-    {
-        "id": "Electron"
-    }
-]
+{
+  "electron": {
+    "name": "Electron (/Positron)",
+    "repr": "e<sup>±</sup>"
+  }
+}
