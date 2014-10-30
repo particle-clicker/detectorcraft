@@ -1,17 +1,21 @@
-[
-    {
-        "id": "tracker",
-        "thickness": 100,
-        "material": "",
-        "measurements":
-        {
-            "Electron":
-            {
-                "Tracking": 0.9,
-                "ECal": 0
-            }
-        },
-        "stops": [],
-        "cost": 1000
-    }
-]
+{
+  "tracker": {
+    "name": "Tracker",
+    "measurements": {
+      "electron": {
+        "track": 0.9
+      }
+    },
+    "stops": [],
+  },
+  "ecal": {
+    "name": "ECal",
+    "measurements": {
+      "electron": {
+        "energy": 0.9,
+        "track": 0.2
+      }
+    },
+    "stops": ["electron"]
+  }
+}
