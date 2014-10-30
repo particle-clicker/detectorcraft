@@ -48,9 +48,7 @@
   border-top-right-radius: 10px;
 }
 
-.column.over {
-  border: 2px dashed #000;
-}
+
 
 body{
   width:100%;
